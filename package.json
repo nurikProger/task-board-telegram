@@ -6,21 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "bot:dev": "ts-node bot/index.ts"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@telegram-apps/sdk-react": "^3.1.2",
+    "@tma.js/sdk-react": "^2.2.8",
+    "dotenv": "^16.4.7",
     "firebase": "^11.4.0",
     "next": "15.2.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "telegraf": "^4.16.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^20.17.25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
