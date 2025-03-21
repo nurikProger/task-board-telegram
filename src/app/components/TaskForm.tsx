@@ -10,7 +10,7 @@ interface TaskFormProps {
 
 export default function TaskForm({ groupId }: TaskFormProps) {
   const [title, setTitle] = useState('');
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null); // ✅ Declare error
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,7 +28,7 @@ export default function TaskForm({ groupId }: TaskFormProps) {
       setError(null);
     } catch (err) {
       console.error('Error adding task:', err);
-      setError('Failed to add task');
+      setError('Failed to add task'); // ✅ Set error message
     }
   };
 
@@ -41,6 +41,9 @@ export default function TaskForm({ groupId }: TaskFormProps) {
         placeholder="Add a new task"
         className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
+      {/* ✅ Display error if it exists */}
+      {error && <p className="text-red-500">{error}</p>}  
+
       <button
         type="submit"
         className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors"
